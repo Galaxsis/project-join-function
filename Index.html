@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Project 80</title>
+</head>
+<body bgcolor="Pink">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .column {
+          float: left;
+          width: 50%;
+          padding: 30px;
+        }
+        
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+    </style>
+
+    <script>
+        function getparagraph1()
+        {
+            var paragraph1 = [];
+            for(var x = 1; x <=6; x++)
+        {
+            paragraph1.push(document.getElementById("para1-input_box_" + x).value);
+            paragraph1.join(". ");
+        }
+
+            document.getElementById("showparagraph1").innerHTML = paragraph1.join(". ");
+        }
+
+        function getparagraph2()
+        {
+            var paragraph2 = [];
+            for(var i = 1; i <=6; i++)
+        {
+            paragraph2.push(document.getElementById("para2-input_box_" + i).value);
+            paragraph2.join(". ");
+        }
+
+            document.getElementById("showparagraph2").innerHTML = paragraph2.join(". ");
+        }      
+
+    </script>
+
+<font face = "Forte" size = 5 color = "Brown">
+<h1><center>Make paragraphs from input boxes using the Join function</center></h1>
+</font>
+<Hr color = "Brown" size = 3 width = 90%>
+<br><br>
+
+<div class = "row">
+    <div class = "column" style="background-color:#aaa;">
+        <span>1. </span>
+        <input type="text" id="para1-input_box_1" placeholder="Input box 1">
+        <br><br>
+        <span>2. </span>
+        <input type="text" id="para1-input_box_2" placeholder="Input box 2">
+        <br><br>
+        <span>3. </span>
+        <input type="text" id="para1-input_box_3" placeholder="Input box 3">
+        <br><br>
+        <span>4. </span>
+        <input type="text" id="para1-input_box_4" placeholder="Input box 4">
+        <br><br>
+        <span>5. </span>
+        <input type="text" id="para1-input_box_5" placeholder="Input box 5">
+        <br><br>
+        <span>6. </span>
+        <input type="text" id="para1-input_box_6" placeholder="Input box 6">
+        <br><br>
+        
+        <button onclick="getparagraph1()">Get Paragraph 1</button>
+        <br><br><br><br>
+
+        <div id = "showparagraph1"></div>
+    </div>    
+
+    <div class = "column" style="background-color:#bbb;">
+        <span>1. </span>
+        <input type="text" id="para2-input_box_1" placeholder="Input box 1">
+        <br><br>
+        <span>2. </span>
+        <input type="text" id="para2-input_box_2" placeholder="Input box 2">
+        <br><br>
+        <span>3. </span>
+        <input type="text" id="para2-input_box_3" placeholder="Input box 3">
+        <br><br>
+        <span>4. </span>
+        <input type="text" id="para2-input_box_4" placeholder="Input box 4">
+        <br><br>
+        <span>5. </span>
+        <input type="text" id="para2-input_box_5" placeholder="Input box 5">
+        <br><br>
+        <span>6. </span>
+        <input type="text" id="para2-input_box_6" placeholder="Input box 6">
+        <br><br>
+ 
+        <button onclick="getparagraph2()">Get Paragraph 2</button>
+        <br><br><br><br>
+
+        <div id="showparagraph2"></div>
+    </div>
+</div>
+
+</body>
+</html>
